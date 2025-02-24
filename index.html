@@ -2,188 +2,214 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Wageh</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: black;
-            color: white;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Wageh</title>
+  <style>
 
-        header {
-            background-color: #2d2e2d;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        nav {
-            background-color: #333;
-            text-align: center;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      animation: fadeIn 1s ease-in;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        nav li {
-            display: inline;
-        }
+    header {
+      background-color: #2d2e2d;
+      padding: 15px;
+      text-align: center;
+    }
 
-        nav a {
-            display: inline-block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
+    nav {
+      background-color: #333;
+      text-align: center;
+    }
 
-        nav a:hover {
-            background-color: #111;
-        }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
 
-        .about {
-            padding: 20px;
-            text-align: center;
-        }
+    nav li {
+      display: inline;
+    }
 
-        .jpg {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-        }
+    nav a {
+      display: inline-block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
-        .cv-section {
-            text-align: center;
-            margin-top: 20px;
-        }
+    nav a:hover {
+      background-color: #111;
+    }
 
-        .cv-section a {
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-            background-color: #444;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
+    .about, .blog, #contact {
+      padding: 20px;
+      text-align: center;
+    }
 
-        .cv-section a:hover {
-            background-color: #555;
-        }
+    .about img.jpg {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      max-width: 100%;
+    }
 
-        .blog {
-            text-align: center;
-            margin: 20px;
-        }
+    .cv-section {
+      margin-top: 20px;
+    }
 
-        .ph img {
-            width: 150px;
-            height: auto;
-            margin: 5px;
-            border-radius: 10px;
-        }
+    .cv-section a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      background-color: #444;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        #contact {
-            text-align: center;
-            margin: 20px;
-        }
+    .cv-section a:hover {
+      background-color: #555;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
 
-       form {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    text-align: right;
-    max-width: 400px;
-    width: 100%;
-}
+    .ph img {
+      width: 150px;
+      height: auto;
+      margin: 5px;
+      border-radius: 10px;
+      max-width: 100%;
+      transition: transform 0.3s ease;
+    }
 
-form input, form textarea, form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-}
+    .ph img:hover {
+      transform: scale(1.05);
+    }
 
-form button {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-}
+    #contact form {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      text-align: left;
+      max-width: 400px;
+      width: 100%;
+    }
 
-form button:hover {
-    background-color: #555;
-}
-        footer {
-            background-color: #2d2e2d;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    #contact form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #contact form input, 
+    #contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #contact form input::placeholder,
+    #contact form textarea::placeholder {
+      color: #999;
+    }
+
+    #contact form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #contact form button:hover {
+      background-color: #555;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    footer {
+      background-color: #2d2e2d;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>Mario Wageh</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section class="about" id="about">
-        <img src="mario.JPG" alt="Mario Wageh" class="jpg">
-        <h2>Hi, I'm Mario Wageh</h2>
-        <p>I am a student at the German College of Technology in Assiut, Department of Technology and Information.
-            I am always looking to stay up-to-date on the latest technologies and techniques. So I can develop the best solutions for my clients.
-            My key skills include HTML, CSS, JavaScript, Bootstrap, Express, Adobe Photoshop, MongoDB, PHP, Java, C#, CCNA, Git & GitHub, and C++.</p>
-        <div class="cv-section">
-            <h3>Curriculum Vitae</h3>
-            <a href="Curriculum Vitae.pdf" download>Download CV</a>
-        </div>
-    </section>
-    <section class="blog" id="blog">
-        <h2>Blog</h2>
-        <div class="ph">
-            <img src="1.jpg" alt="Blog Image 1">
-            <img src="2.jpg" alt="Blog Image 2">
-            <img src="3.jpg" alt="Blog Image 3">
-            <img src="4.jpg" alt="Blog Image 4">
-            <img src="5.jpg" alt="Blog Image 5">
-            <img src="6.jpg" alt="Blog Image 6">
-            <img src="7.jpg" alt="Blog Image 7">
-        </div>
-    </section>
-    <section id="contact">
-        <h2>ابعت بياناتك ياحبيبي ف استقبالك ف اي وقت</h2>
-        <form id="contactForm">
-            <label for="name">الاسم:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">البريد الإلكتروني:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">الرسالة:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">إرسال</button>
-        </form>
-    </section>
-    <footer>
-        <p>Copyright © 2024 by Mario Wageh</p>
-    </footer>
+  <header>
+    <h1>Mario Wageh</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="about" id="about">
+    <img src="mario.JPG" alt="صورة Mario Wageh" class="jpg">
+    <h2>Hi, I'm Mario Wageh</h2>
+    <p>I am a student at the German College of Technology in Assiut, Department of Technology and Information.
+      I always strive to stay up-to-date with the latest technologies and techniques, so I can develop the best solutions for my clients.
+      My key skills include HTML, CSS, JavaScript, Bootstrap, Express, Adobe Photoshop, MongoDB, PHP, Java, C#, CCNA, Git & GitHub, and C++.</p>
+    <div class="cv-section">
+      <h3>Curriculum Vitae</h3>
+      <a href="Curriculum Vitae.pdf" download>Download CV</a>
+    </div>
+  </section>
+  <section class="blog" id="blog">
+    <h2>Blog</h2>
+    <div class="ph">
+      <img src="1.jpg" alt="Blog Image 1">
+      <img src="2.jpg" alt="Blog Image 2">
+      <img src="3.jpg" alt="Blog Image 3">
+      <img src="4.jpg" alt="Blog Image 4">
+      <img src="5.jpg" alt="Blog Image 5">
+      <img src="6.jpg" alt="Blog Image 6">
+      <img src="7.jpg" alt="Blog Image 7">
+    </div>
+  </section>
+  <section id="contact">
+    <h2>تواصل معي في أي وقت عبر النموذج التالي</h2>
+    <form id="contactForm">
+      <label for="name">الاسم:</label>
+      <input type="text" id="name" name="name" placeholder="ادخل اسمك" required>
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required>
+      <label for="message">الرسالة:</label>
+      <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+  <footer>
+    <p>Copyright © 2024 by Mario Wageh</p>
+  </footer>
 </body>
 
 </html>
