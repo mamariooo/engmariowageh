@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>mario wageh</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Wageh</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -9,39 +12,35 @@
             padding: 0;
             box-sizing: border-box;
             background-color: black;
+            color: white;
         }
 
         header {
             background-color: #2d2e2d;
             color: white;
-            padding: 10px 10px;
+            padding: 15px;
             text-align: center;
-
         }
 
         nav {
             background-color: #333;
+            text-align: center;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            overflow: hidden;
         }
 
         nav li {
-            /* float: center; */
-            display: inline-block;
-            text-align: center;
-            text-justify: center;
+            display: inline;
         }
 
         nav a {
-            display: block;
+            display: inline-block;
             color: white;
-            text-align: center;
-            padding: 14px 16px;
+            padding: 14px 20px;
             text-decoration: none;
         }
 
@@ -49,53 +48,58 @@
             background-color: #111;
         }
 
-        .home1 {
-            font-size: 40px;
-            color: beige;
-            text-shadow: 2px 2px 20px beige;
-        }
-
-        #pr {
-            color: rgb(255, 255, 255);
-            font-size: 20px;
-        }
-
-        .section1 {
-            border: 10px solid rgb(120, 121, 122);
-            box-shadow: 1px 2px 3px beige;
-
-
+        .about {
+            padding: 20px;
+            text-align: center;
         }
 
         .jpg {
-            float: right;
             width: 160px;
-            height: 140px;
-            border-radius: 60px;
-          
+            height: 160px;
+            border-radius: 50%;
         }
 
-      
-
-        .bo {
-            color: beige;
-            padding: 10px 10px;
-            font-size: 40px;
+        .cv-section {
+            text-align: center;
+            margin-top: 20px;
         }
 
-        .ph {
-            border: 10px solid rgb(252, 252, 235);
+        .cv-section a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #444;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
 
+        .cv-section a:hover {
+            background-color: #555;
+        }
+
+        .blog {
+            text-align: center;
+            margin: 20px;
         }
 
         .ph img {
-            width: 600px;
-            height: 150px;
-            display: flex;
-            text-align: center;
-            display: inline-block;
+            width: 150px;
+            height: auto;
+            margin: 5px;
+            border-radius: 10px;
         }
 
+        #contact {
+            text-align: center;
+            margin: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
 
         footer {
             background-color: #2d2e2d;
@@ -106,79 +110,45 @@
             width: 100%;
             bottom: 0;
         }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-top: 10px;
-        }
-
-        input,
-        textarea,
-        button {
-            padding: 10px;
-            margin-top: 5px;
-        }
-
-        #contact {
-            color: #ffffff;
-        }
     </style>
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="headerh1">Mario wageh</h1>
+    <header>
+        <h1>Mario Wageh</h1>
     </header>
     <nav>
-
-        <ul class="navlist">
+        <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section class="about">
-        <div class="dd">
-            <img src="mario.JPG" alt="" class="jpg">
-            <div class="home1">
-                <h1 id="h1se">Hi I'm Mario Wegh</h1>
-            </div>
-            <p id="pr">I am a student at the German College of Technology in Assiut, Department of Technology and Information .
-I am always looking to stay up-to-date on the latest technologies and techniques. So I can develop the best solutions for my clients.
-My key skills include HTML, CSS, JavaScript, Bootstrap , Exprss, Adobe photoshop, MongoDB ,php ,java ,c#, ccna ,Git & GitHub , C++.</p>
-        <br>    <p>Curriculum Vitae:</p><a href="Curriculum Vitae.pdf">
-     
-       
+    <section class="about" id="about">
+        <img src="mario.JPG" alt="Mario Wageh" class="jpg">
+        <h2>Hi, I'm Mario Wageh</h2>
+        <p>I am a student at the German College of Technology in Assiut, Department of Technology and Information.
+            I am always looking to stay up-to-date on the latest technologies and techniques. So I can develop the best solutions for my clients.
+            My key skills include HTML, CSS, JavaScript, Bootstrap, Express, Adobe Photoshop, MongoDB, PHP, Java, C#, CCNA, Git & GitHub, and C++.</p>
+        <div class="cv-section">
+            <h3>Curriculum Vitae</h3>
+            <a href="Curriculum Vitae.pdf" download>Download CV</a>
         </div>
     </section>
-
-    <section class="blog">
-        <br>
-        <br>
-        <br>
-        <div class="divbol">
-            <div class="bo">
-                <span>Blog</span>
-            </div>
-
-            <div class="ph">
-                <img src="1.jpg" alt="">
-                <img src="2.jpg" alt="">
-                <img src="3.jpg" alt="">
-                <img src="4.jpg" alt="">
-                <img src="5.jpg" alt="">
-                <img src="6.jpg" alt="">
-                <img src="7.jpg" alt="">
-            </div>
+    <section class="blog" id="blog">
+        <h2>Blog</h2>
+        <div class="ph">
+            <img src="1.jpg" alt="Blog Image 1">
+            <img src="2.jpg" alt="Blog Image 2">
+            <img src="3.jpg" alt="Blog Image 3">
+            <img src="4.jpg" alt="Blog Image 4">
+            <img src="5.jpg" alt="Blog Image 5">
+            <img src="6.jpg" alt="Blog Image 6">
+            <img src="7.jpg" alt="Blog Image 7">
         </div>
     </section>
-
     <section id="contact">
-        <h2>ابعت بياناتك ياحبيبي ف استقبالك ف اي وقت </h2>
+        <h2>ابعت بياناتك ياحبيبي ف استقبالك ف اي وقت</h2>
         <form id="contactForm">
             <label for="name">الاسم:</label>
             <input type="text" id="name" name="name" required>
@@ -187,18 +157,10 @@ My key skills include HTML, CSS, JavaScript, Bootstrap , Exprss, Adobe photoshop
             <label for="message">الرسالة:</label>
             <textarea id="message" name="message" required></textarea>
             <button type="submit">إرسال</button>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </form>
     </section>
     <footer>
-        <p> Copyright © 2024 by Mario Wageh</p>
+        <p>Copyright © 2024 by Mario Wageh</p>
     </footer>
 </body>
 
