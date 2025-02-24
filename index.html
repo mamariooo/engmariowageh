@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mario Wageh</title>
   <style>
-
+    /* قاعدة عامة */
     * {
       box-sizing: border-box;
     }
@@ -17,6 +16,9 @@
       padding: 0;
       background-color: black;
       color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       animation: fadeIn 1s ease-in;
     }
 
@@ -58,14 +60,18 @@
       background-color: #111;
     }
 
+    main {
+      flex: 1;
+    }
+
     .about, .blog, #contact {
       padding: 20px;
       text-align: center;
     }
 
     .about img.jpg {
-      width: 160px;
-      height: 160px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       max-width: 100%;
     }
@@ -92,7 +98,7 @@
     }
 
     .ph img {
-      width: 150px;
+      width: 250px;
       height: auto;
       margin: 5px;
       border-radius: 10px;
@@ -112,6 +118,7 @@
       text-align: left;
       max-width: 400px;
       width: 100%;
+      margin: 0 auto; /* لتوسيط النموذج */
     }
 
     #contact form label {
@@ -154,13 +161,10 @@
       background-color: #2d2e2d;
       text-align: center;
       padding: 10px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      /* إزالة الخاصية الثابتة لتجنب تغطية المحتوى */
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Mario Wageh</h1>
@@ -172,44 +176,45 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <section class="about" id="about">
-    <img src="mario.JPG" alt="صورة Mario Wageh" class="jpg">
-    <h2>Hi, I'm Mario Wageh</h2>
-    <p>I am a student at the German College of Technology in Assiut, Department of Technology and Information.
-      I always strive to stay up-to-date with the latest technologies and techniques, so I can develop the best solutions for my clients.
-      My key skills include HTML, CSS, JavaScript, Bootstrap, Express, Adobe Photoshop, MongoDB, PHP, Java, C#, CCNA, Git & GitHub, and C++.</p>
-    <div class="cv-section">
-      <h3>Curriculum Vitae</h3>
-      <a href="Curriculum Vitae.pdf" download>Download CV</a>
-    </div>
-  </section>
-  <section class="blog" id="blog">
-    <h2>Blog</h2>
-    <div class="ph">
-      <img src="1.jpg" alt="Blog Image 1">
-      <img src="2.jpg" alt="Blog Image 2">
-      <img src="3.jpg" alt="Blog Image 3">
-      <img src="4.jpg" alt="Blog Image 4">
-      <img src="5.jpg" alt="Blog Image 5">
-      <img src="6.jpg" alt="Blog Image 6">
-      <img src="7.jpg" alt="Blog Image 7">
-    </div>
-  </section>
-  <section id="contact">
-    <h2>تواصل معي في أي وقت عبر النموذج التالي</h2>
-    <form id="contactForm">
-      <label for="name">الاسم:</label>
-      <input type="text" id="name" name="name" placeholder="ادخل اسمك" required>
-      <label for="email">البريد الإلكتروني:</label>
-      <input type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required>
-      <label for="message">الرسالة:</label>
-      <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
-      <button type="submit">إرسال</button>
-    </form>
-  </section>
+  <main>
+    <section class="about" id="about">
+      <img src="mario.JPG" alt="صورة Mario Wageh" class="jpg">
+      <h2>Hi, I'm Mario Wageh</h2>
+      <p>I am a student at the German College of Technology in Assiut, Department of Technology and Information.
+         I always strive to stay up-to-date with the latest technologies and techniques, so I can develop the best solutions for my clients.
+         My key skills include HTML, CSS, JavaScript, Bootstrap, Express, Adobe Photoshop, MongoDB, PHP, Java, C#, CCNA, Git & GitHub, and C++.</p>
+      <div class="cv-section">
+        <h3>Curriculum Vitae</h3>
+        <a href="Curriculum Vitae.pdf" download>Download CV</a>
+      </div>
+    </section>
+    <section class="blog" id="blog">
+      <h2>Blog</h2>
+      <div class="ph">
+        <img src="1.jpg" alt="Blog Image 1">
+        <img src="2.jpg" alt="Blog Image 2">
+        <img src="3.jpg" alt="Blog Image 3">
+        <img src="4.jpg" alt="Blog Image 4">
+        <img src="5.jpg" alt="Blog Image 5">
+        <img src="6.jpg" alt="Blog Image 6">
+        <img src="7.jpg" alt="Blog Image 7">
+      </div>
+    </section>
+    <section id="contact">
+      <h2>ابعت بياناتك يحبيبي </h2>
+      <form id="contactForm">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" placeholder="ادخل اسمك" required>
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required>
+        <label for="message">الرسالة:</label>
+        <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
   <footer>
     <p>Copyright © 2024 by Mario Wageh</p>
   </footer>
 </body>
-
 </html>
